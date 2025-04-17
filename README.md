@@ -9,7 +9,7 @@ File: index.html
 
 Hosting: GitHub Pages
 
-Live Site: https://satwikaasridhar.github.io/resume/
+Live Site: https://satwikaasridhar.github.io/Hosting_a-static-website/
 
 🚀 Deployment Steps
 
@@ -24,7 +24,7 @@ Initialize Git Repository:
 git init git add index.html git commit -m "Initial commit"
 
 Push to GitHub:
-git remote add origin https://satwikaasridhar.github.io/resume/ git branch -M main git push -u origin main
+git remote add origin https://satwikaasridhar.github.io/Hosting_a-static-website/ git branch -M main git push -u origin main
 
 Enable GitHub Pages:
 Navigate to your repository on GitHub. Click on Settings > Pages. Under Source, select the main branch and / (root) folder. Click Save.

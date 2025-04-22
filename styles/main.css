@@ -1,181 +1,143 @@
 @import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@300;400;500;600;700&display=swap');
 
 :root {
-  --mainTextColor-light: #000;
-  --secondaryTextColor-light: rgb(51 51 51);
-  --mainLinkColor-light: #0da2b8;
-  --mainBorderColor-light: rgb(218, 218, 218);
-  --mainBgColor-light: rgb(249, 250, 251);
+	--mainTextColor-light: #000;
+	--secondaryTextColor-light: rgb(51 51 51);
+	--mainLinkColor-light: #0da2b8;
+	--mainBorderColor-light: rgb(218, 218, 218);
+	--mainBgColor-light: rgb(249, 250, 251);
 
-  --mainTextColor-dark: #fff;
-  --secondaryTextColor-dark: #adb0b1;
-  --mainLinkColor-dark: rgb(30, 214, 177);
-  --mainBorderColor-dark: #2b3031;
-  --mainBgColor-dark: #00000e;
+	--mainTextColor-dark: #fff;
+	--secondaryTextColor-dark: #adb0b1;
+	--mainLinkColor-dark: rgb(30, 214, 177);
+	--mainBorderColor-dark: #2b3031;
+	--mainBgColor-dark: #00000e;
 
-  --mainTextColor: var(--mainTextColor-dark);
-  --secondaryTextColor: var(--secondaryTextColor-dark);
-  --mainLinkColor: var(--mainLinkColor-dark);
-  --mainBorderColor: var(--mainBorderColor-dark);
-  --mainBgColor: var(--mainBgColor-dark);
+	--mainTextColor: var(--mainTextColor-dark);
+	--secondaryTextColor: var(--secondaryTextColor-dark);
+	--mainLinkColor: var(--mainLinkColor-dark);
+	--mainBorderColor: var(--mainBorderColor-dark);
+	--mainBgColor: var(--mainBgColor-dark);
+
 }
 
 * {
-  font-family: 'Readex Pro', sans-serif;
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  color: var(--mainTextColor);
+	font-family: 'Readex Pro';
+	line-height: 1.5em;
+	box-sizing: border-box;
+	color: var(--mainTextColor);
+
 }
 
 body {
-  background-color: var(--mainBgColor);
-  padding: 2rem 1rem;
+	background-color: var(--mainBgColor);
+}
+
+p,
+span,
+li {
+	color: var(--secondaryTextColor);
+	font-size: 1em;
 }
 
 a {
-  color: var(--mainLinkColor);
-  text-decoration: none;
-  font-weight: 500;
-  transition: color 0.3s ease;
+	text-decoration: none;
+	color: var(--mainLinkColor);
+	font-weight: 500;
 }
 
-a:hover {
-  color: #ffffff;
+li {
+	line-height: 1.9em;
 }
 
 #container--main {
-  max-width: 960px;
-  margin: auto;
-}
-
-#wrapper--hero {
-  text-align: center;
-  margin-bottom: 2rem;
-}
-
-#user-name {
-  font-size: 3rem;
-  line-height: 1.2;
-  font-weight: 600;
-}
-
-.bio, .email {
-  font-weight: 300;
-  color: var(--secondaryTextColor);
-  margin-top: 0.5rem;
+	max-width: 700px;
+	margin: 0 auto;
+	padding: 1em;
 }
 
 .section--page {
-  margin-bottom: 2.5rem;
+	padding-top: 1em;
+	padding-bottom: 1em;
+}
+
+#wrapper--hero {
+	display: flex;
+	align-items: center;
+	gap: 4em;
+}
+
+#bio,
+a {
+	font-weight: 300;
+}
+
+#user-name {
+	font-size: 48px;
+	line-height: 1em;
+}
+
+#profile-pic {
+	width: 150px;
+	height: 150px;
+	object-fit: cover;
+	border-radius: 50%;
+}
+
+#email {
+	color: var(--mainTextColor);
 }
 
 #socials--list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  justify-content: center;
-  margin-top: 1.5rem;
-  padding: 0 0.5rem;
+	display: flex;
+	justify-content: space-between;
+	column-gap: 1em;
+	flex-wrap: wrap;
 }
 
 #socials--list a {
-  font-weight: 300;
-  font-size: 0.95rem;
-  color: var(--secondaryTextColor);
-  transition: all 0.3s ease;
+	font-weight: 300;
+	color: var(--secondaryTextColor);
+	font-size: 0.9em;
+	transition: 0.3s;
 }
 
 #socials--list a:hover {
-  color: var(--mainLinkColor);
-  font-weight: 400;
+	font-weight: 100;
+	color: var(--mainLinkColor);
+	font-size: 0.9em;
 }
 
 #qualifications--list {
-  list-style: none;
-  padding-left: 1.5rem;
-  margin-top: 1rem;
+	list-style: none;
 }
 
-#qualifications--list li {
-  margin-bottom: 0.5rem;
-  color: var(--secondaryTextColor);
-  position: relative;
-}
-
-#qualifications--list li::before {
-  content: "✔️";
-  position: absolute;
-  left: -1.5rem;
+#qualifications--list {
+	list-style: none;
 }
 
 #wrapper--techstack__items {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.75rem;
-  margin-top: 1rem;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1em;
+	font-size: 0.9em;
 }
 
 .card--techstack {
-  padding: 0.5rem 1rem;
-  border: 1px solid var(--mainBorderColor);
-  border-radius: 5px;
-  font-size: 0.95rem;
-  color: var(--secondaryTextColor);
-  background-color: #111;
-}
-
-.techstack--logos {
-  margin-top: 1.5rem;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  justify-content: center;
-}
-
-.techstack--logos img {
-  width: 40px;
-  height: 40px;
-  object-fit: contain;
-  transition: transform 0.2s ease-in-out;
-  background-color: #fff;
-  border-radius: 8px;
-  padding: 0.25rem;
-}
-
-.techstack--logos img:hover {
-  transform: scale(1.1);
+	border: 1px solid var(--mainBorderColor);
+	border-radius: 5px;
+	padding: 0.5em 1em;
+	align-items: center;
 }
 
 .card--academic-history {
-  border-left: 1px solid var(--mainBorderColor);
-  margin: 3em 0;
-  padding-left: 2em;
+	border-left: 1px solid var(--mainBorderColor);
+	margin-top: 3em;
+	margin-bottom: 3em;
+	padding-left: 2em;
 }
 
 .line-break {
-  background-color: var(--mainBorderColor);
-  height: 1px;
-  margin: 2em 0;
-}
-
-@media (max-width: 768px) {
-  #wrapper--hero {
-    flex-direction: column;
-    gap: 2rem;
-  }
-
-  #user-name {
-    font-size: 2.25rem;
-  }
-
-  .techstack--logos img {
-    width: 36px;
-    height: 36px;
-  }
-
-  #socials--list {
-    flex-direction: column;
-    align-items: center;
-  }
+	background-color: var(--mainBorderColor);
+	height: 1px;
 }
